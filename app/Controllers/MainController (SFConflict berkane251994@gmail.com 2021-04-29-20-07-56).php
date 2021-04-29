@@ -51,6 +51,7 @@ class MainController extends CoreController{
             'personnage'=>$personnage
         ]);
     }
+    
 
 
 

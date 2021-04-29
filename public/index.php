@@ -32,13 +32,35 @@ $router->map(
 
     // "target" : ce tableau stocke les noms de l'action et du contrôleur qui vont se déclencher pour réagir à cette URL
     [
-        'method' => 'home',
+        'method' => 'personnages',
         'controller' => 'App\Controllers\MainController'
     ], 
-    'main-home' // On donne un nom (un identifiant à la route)
+    'main-personnages' // On donne un nom (un identifiant à la route)
 );
 
+$router->map(
+    'GET', // La méthode HTTP qui est autorisée  (GET ou POST)
+    '/createur', // L'url que l'on saisira dans le navigateur
 
+    // "target" : ce tableau stocke les noms de l'action et du contrôleur qui vont se déclencher pour réagir à cette URL
+    [
+        'method' => 'createur',
+        'controller' => 'App\Controllers\MainController'
+    ], 
+    'main-createur' // On donne un nom (un identifiant à la route)
+
+);
+$router->map(
+    'GET', // La méthode HTTP qui est autorisée  (GET ou POST)
+    '/portrait/[i:id]', // L'url que l'on saisira dans le navigateur
+
+    // "target" : ce tableau stocke les noms de l'action et du contrôleur qui vont se déclencher pour réagir à cette URL
+    [
+        'method' => 'portrait',
+        'controller' => 'App\Controllers\MainController'
+    ], 
+    'main-portrait' // On donne un nom (un identifiant à la route)
+);
 //=========================
 // Dispatching START
 //=========================

@@ -1,12 +1,14 @@
 <?php 
 
 namespace App\Controllers;
+use App\Models\Personnages;
 
 
 
 
 // Classe mère de tous les controllers
 class CoreController {
+    
     /**
      * Méthode qui s'occupe d'afficher la page grace aux différents templates
      *
@@ -15,11 +17,6 @@ class CoreController {
      * @return void
      */
     protected function show($viewName, $viewVars = []) {
-        // $viewVars est disponible dans chaque fichier de vue
-        // si home, $viewName = 'home'
-        // $viewVars =  contient ce qu'on avait dans le tableau $params
-
-        // Pour transmettre des datas disponibles dans toutes les pages
        
         $router = $GLOBALS['router'];
 
